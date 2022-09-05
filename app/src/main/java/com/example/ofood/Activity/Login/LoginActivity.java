@@ -1,4 +1,4 @@
-package com.example.ofood.Onboarding;
+package com.example.ofood.Activity.Login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,12 +6,11 @@ import android.os.Bundle;
 
 import com.example.ofood.R;
 
-public class OnboardingActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_onboarding);
-
+        setContentView(R.layout.activity_login);
     }
 }

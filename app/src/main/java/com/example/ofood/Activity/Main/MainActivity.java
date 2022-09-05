@@ -1,4 +1,4 @@
-package com.example.ofood.Main;
+package com.example.ofood.Activity.Main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
