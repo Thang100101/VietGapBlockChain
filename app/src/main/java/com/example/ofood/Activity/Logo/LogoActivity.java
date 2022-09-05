@@ -1,7 +1,5 @@
 package com.example.ofood.Activity.Logo;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,7 +8,9 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.ofood.Activity.Main.MainActivity;
 import com.example.ofood.R;
 
 public class LogoActivity extends AppCompatActivity {
@@ -20,7 +20,7 @@ public class LogoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logo);
         Mapping();
-
+        runAnimationFood();
     }
 
     private void Mapping(){
@@ -34,9 +34,9 @@ public class LogoActivity extends AppCompatActivity {
             @Override
             public void run() {
                 imgFood.setVisibility(View.VISIBLE);
-                Animation animation = AnimationUtils.loadAnimation(this, R.anim.bot_to_mid);
+                Animation animation = AnimationUtils.loadAnimation(LogoActivity.this, R.anim.bot_to_mid);
                 imgFood.startAnimation(animation);
-
+                nextActivity();
             }
         },500);
     }
@@ -46,6 +46,8 @@ public class LogoActivity extends AppCompatActivity {
             @Override
             public void run() {
                 Intent intent = new Intent(LogoActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
             }
         },1500);
     }

@@ -16,14 +16,14 @@
             android:id="@+id/img_o"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="@drawable/logo_ofood_2"
+            android:src="@drawable/logo_ofood_2_removebg"
             android:layout_marginLeft="20dp"
             ></ImageView>
         <ImageView
             android:id="@+id/img_food"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/food"
+            android:src="@drawable/food_removebg"
             ></ImageView>
     </LinearLayout>
 
