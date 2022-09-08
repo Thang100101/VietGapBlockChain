@@ -4,11 +4,19 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/USER/Desktop/VietGap/VietGapBlockChain/app/src/main/res/drawable/background_actionbar.xml" value="0.1265" />
+        <entry key="..\:/Users/USER/Desktop/VietGap/VietGapBlockChain/app/src/main/res/drawable/background_circle_indicator.xml" value="0.1265" />
         <entry key="..\:/Users/USER/Desktop/VietGap/VietGapBlockChain/app/src/main/res/drawable/bottom_navigation_text_color.xml" value="0.1265" />
         <entry key="..\:/Users/USER/Desktop/VietGap/VietGapBlockChain/app/src/main/res/drawable/button_scan.xml" value="0.1265" />
+        <entry key="..\:/Users/USER/Desktop/VietGap/VietGapBlockChain/app/src/main/res/drawable/icon_back.xml" value="0.1265" />
         <entry key="..\:/Users/USER/Desktop/VietGap/VietGapBlockChain/app/src/main/res/layout/activity_logo.xml" value="0.12360688956433637" />
         <entry key="..\:/Users/USER/Desktop/VietGap/VietGapBlockChain/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/USER/Desktop/VietGap/VietGapBlockChain/app/src/main/res/layout/activity_onboarding.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/USER/Desktop/VietGap/VietGapBlockChain/app/src/main/res/layout/fragment_about_us.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/USER/Desktop/VietGap/VietGapBlockChain/app/src/main/res/layout/fragment_detail_product.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/USER/Desktop/VietGap/VietGapBlockChain/app/src/main/res/layout/fragment_onboarding1.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/USER/Desktop/VietGap/VietGapBlockChain/app/src/main/res/layout/fragment_onboarding2.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/USER/Desktop/VietGap/VietGapBlockChain/app/src/main/res/layout/fragment_onboarding3.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/USER/Desktop/VietGap/VietGapBlockChain/app/src/main/res/layout/fragment_qr_image.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/USER/Desktop/VietGap/VietGapBlockChain/app/src/main/res/layout/fragment_rate_for_us.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/USER/Desktop/VietGap/VietGapBlockChain/app/src/main/res/layout/fragment_scan_qr.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/USER/Desktop/VietGap/VietGapBlockChain/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.25416666666666665" />

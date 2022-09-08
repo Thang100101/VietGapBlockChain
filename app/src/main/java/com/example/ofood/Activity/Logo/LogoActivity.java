@@ -10,7 +10,7 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.ofood.Activity.Main.MainActivity;
+import com.example.ofood.Activity.Onboarding.OnboardingActivity;
 import com.example.ofood.R;
 
 public class LogoActivity extends AppCompatActivity {
@@ -21,6 +21,7 @@ public class LogoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_logo);
         Mapping();
         runAnimationFood();
+        getSupportActionBar().hide();
     }
 
     private void Mapping(){
@@ -45,7 +46,7 @@ public class LogoActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(LogoActivity.this, MainActivity.class);
+                Intent intent = new Intent(LogoActivity.this, OnboardingActivity.class);
                 startActivity(intent);
                 finish();
             }

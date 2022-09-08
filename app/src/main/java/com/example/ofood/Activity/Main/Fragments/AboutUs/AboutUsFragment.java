@@ -56,6 +56,8 @@ public class AboutUsFragment extends Fragment {
         }
     }
 
+    public static final String NAME = AboutUsFragment.class.getName();
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
