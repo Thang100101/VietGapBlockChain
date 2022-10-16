@@ -35,6 +35,8 @@ import retrofit2.Response;
  * create an instance of this fragment.
  */
 public class ScanQrFragment extends Fragment implements ScanQrView, FragmentView {
+    private API jsonPlaceHolder;
+    private RetrofitClient retrofitClient;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -91,7 +93,23 @@ public class ScanQrFragment extends Fragment implements ScanQrView, FragmentView
                 @Override
                 public void onActivityResult(ScanIntentResult result) {
                     if(result.getContents() != null){
+                        jsonPlaceHolder=retrofitClient.getInstance("https://ofood-database.herokuapp.com/").create(API.class);
+                        jsonPlaceHolder.getProductByBarcode(result.getContents()).enqueue(new Callback<List<Product>>() {
+                            @Override
+                            public void onResponse(Call<List<Product>> call, Response<List<Product>> response) {
+                                if(response.body()!=null){
+                                    for(Product product:response.body()){
+                                        scanQrPresenter.loadDetailProductFragment(product);
+                                        break;
+                                    }
+                                }
+                            }
 
+                            @Override
+                            public void onFailure(Call<List<Product>> call, Throwable t) {
+                                Toast.makeText(activity, "Không tìm thấy sản phẩm", Toast.LENGTH_SHORT).show();
+                            }
+                        });
                     }
                 }
             });
