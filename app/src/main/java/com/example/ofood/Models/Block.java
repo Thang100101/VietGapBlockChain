@@ -1,6 +1,6 @@
 package com.example.ofood.Models;
 
-import com.example.vietgapblockchain_nhacungcap.Activity.Model.User.User;
+import com.example.ofood.Models.User.User;
 
 import java.io.Serializable;
 
