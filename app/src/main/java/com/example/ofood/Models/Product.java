@@ -3,20 +3,38 @@ package com.example.ofood.Models;
 import java.io.Serializable;
 
 public class Product implements Serializable {
-    private int id;
-    private String name;
-    private String barcode;
-    private boolean isExpired;
-    private String phone;
-    private String address;
-    private String vietGapCode;
-    private String date;
-    private String technicality;
-    private String environment;
-    private String origin;
-//    private Certification certification;
-//    private String foodSafety;
-//    private byte[] image;
+    protected int id;
+    protected String productName,productCode,vietgapCode;
+    protected String certificationDate,address,phone;
+    protected boolean isExpỉed;
+    protected Exp status;
+
+    public enum Exp{
+        Due,OutOfDate
+    }
+
+    public Product(String productName, String productCode, String vietgapCode, Exp status, String certificationDate,String phone,String address,boolean isExpỉed) {
+        this.productName = productName;
+        this.productCode = productCode;
+        this.vietgapCode = vietgapCode;
+        this.status = status;
+        this.certificationDate = certificationDate;
+        this.isExpỉed=isExpỉed;
+        this.address=address;
+        this.phone=phone;
+    }
+
+    public Product() {
+    }
+
+    public boolean isExpỉed() {
+        return isExpỉed;
+    }
+
+    public void setExpỉed(boolean expỉed) {
+        isExpỉed = expỉed;
+    }
+
 
     public int getId() {
         return id;
@@ -26,28 +44,36 @@ public class Product implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getProductName() {
+        return productName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
-    public boolean isExpired() {
-        return isExpired;
+    public String getProductCode() {
+        return productCode;
     }
 
-    public void setExpired(boolean expired) {
-        isExpired = expired;
+    public void setProductCode(String productCode) {
+        this.productCode = productCode;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getVietgapCode() {
+        return vietgapCode;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setVietgapCode(String vietgapCode) {
+        this.vietgapCode = vietgapCode;
+    }
+
+    public Exp getStatus() {
+        return status;
+    }
+
+    public void setStatus(Exp status) {
+        this.status = status;
     }
 
     public String getAddress() {
@@ -58,75 +84,19 @@ public class Product implements Serializable {
         this.address = address;
     }
 
-    public String getVietGapCode() {
-        return vietGapCode;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setVietGapCode(String vietGapCode) {
-        this.vietGapCode = vietGapCode;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public String getBarcode() {
-        return barcode;
+    public String getCertificationDate() {
+        return certificationDate;
     }
 
-    public void setBarcode(String barcode) {
-        this.barcode = barcode;
+    public void setCertificationDate(String certificationDate) {
+        this.certificationDate = certificationDate;
     }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public String getTechnicality() {
-        return technicality;
-    }
-
-    public void setTechnicality(String technicality) {
-        this.technicality = technicality;
-    }
-
-    public String getEnvironment() {
-        return environment;
-    }
-
-    public void setEnvironment(String environment) {
-        this.environment = environment;
-    }
-
-    public String getOrigin() {
-        return origin;
-    }
-
-    public void setOrigin(String origin) {
-        this.origin = origin;
-    }
-
-//    public Certification getCertification() {
-//        return certification;
-//    }
-//
-//    public void setCertification(Certification certification) {
-//        this.certification = certification;
-//    }
-//
-//    public String getFoodSafety() {
-//        return foodSafety;
-//    }
-//
-//    public void setFoodSafety(String foodSafety) {
-//        this.foodSafety = foodSafety;
-//    }
-//
-//    public byte[] getImage() {
-//        return image;
-//    }
-//
-//    public void setImage(byte[] image) {
-//        this.image = image;
-//    }
 }

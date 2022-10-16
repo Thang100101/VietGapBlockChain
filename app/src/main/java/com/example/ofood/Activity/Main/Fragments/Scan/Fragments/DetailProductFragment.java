@@ -109,13 +109,13 @@ public class DetailProductFragment extends Fragment {
     }
 
     private void loadDetailProduct(Product product){
-        txtName.setText(product.getName());
-        txtBarcode.setText(product.getBarcode());
+        txtName.setText(product.getProductName());
+        txtBarcode.setText(product.getProductCode());
         txtAddress.setText(product.getAddress());
-        txtVietGapCode.setText(product.getVietGapCode());
+        txtVietGapCode.setText(product.getVietgapCode());
         txtPhone.setText(product.getPhone());
-        txtDate.setText(product.getDate());
-        if(product.isExpired()){
+        txtDate.setText(product.getCertificationDate());
+        if(product.isExpỉed()){
             txtIsExpired.setText("Đã hết hạn");
         }else{
             txtIsExpired.setText("Còn hạn");

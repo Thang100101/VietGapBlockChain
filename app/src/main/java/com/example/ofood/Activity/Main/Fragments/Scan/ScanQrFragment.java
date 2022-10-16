@@ -91,19 +91,7 @@ public class ScanQrFragment extends Fragment implements ScanQrView, FragmentView
                 @Override
                 public void onActivityResult(ScanIntentResult result) {
                     if(result.getContents() != null){
-                        API api = RetrofitClient.getRetrofit().create(API.class);
-                        api.getProductByBarcode(result.getContents()).enqueue(new Callback<List<Product>>() {
-                            @Override
-                            public void onResponse(Call<List<Product>> call, Response<List<Product>> response) {
-                                List<Product> products = response.body();
-                                scanQrPresenter.loadDetailProductFragment(products.get(0));
-                            }
 
-                            @Override
-                            public void onFailure(Call<List<Product>> call, Throwable t) {
-                                Toast.makeText(activity, "Không tìm thấy sản phẩm", Toast.LENGTH_SHORT).show();
-                            }
-                        });
                     }
                 }
             });
