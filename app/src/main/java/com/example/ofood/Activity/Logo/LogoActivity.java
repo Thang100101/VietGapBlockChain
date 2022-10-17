@@ -1,6 +1,7 @@
 package com.example.ofood.Activity.Logo;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -10,11 +11,13 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.ofood.Activity.Main.MainActivity;
 import com.example.ofood.Activity.Onboarding.OnboardingActivity;
 import com.example.ofood.R;
 
 public class LogoActivity extends AppCompatActivity {
     private ImageView imgO, imgFood;
+    private SharedPreferences prefer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +30,7 @@ public class LogoActivity extends AppCompatActivity {
     private void Mapping(){
         imgO = findViewById(R.id.img_o);
         imgFood = findViewById(R.id.img_food);
+        prefer = getPreferences(MODE_PRIVATE);
     }
 
     private void runAnimationFood(){
@@ -46,7 +50,16 @@ public class LogoActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(LogoActivity.this, OnboardingActivity.class);
+                boolean isNewMember =prefer.getBoolean("isNewMember", true);
+                Intent intent;
+                if(isNewMember) {
+                    SharedPreferences.Editor editor = prefer.edit();
+                    editor.putBoolean("isNewMember", false);
+                    editor.commit();
+                    intent = new Intent(LogoActivity.this, OnboardingActivity.class);
+                }else{
+                    intent = new Intent(LogoActivity.this, MainActivity.class);
+                }
                 startActivity(intent);
                 finish();
             }

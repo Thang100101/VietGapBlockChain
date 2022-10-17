@@ -10,7 +10,7 @@ import retrofit2.http.Query;
 
 public interface API {
     @GET("products")
-    Call<List<Product>> getProductByBarcode(@Query("barcode") String barcode);
+    Call<List<Product>> getProductByBarcode(@Query("productCode") String barcode);
     @GET("products")
     Call<Product> getProductById(@Query("id") int id);
 }
